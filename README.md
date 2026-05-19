@@ -11,6 +11,12 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Problem solving
 - Learning resources
 
+
+## Current Focus
+- Python
+- Machine Learning Basics
+- Git & GitHub
+- Building consistency
 ## Goal
 Stay consistent, improve daily, and build in public.
 
