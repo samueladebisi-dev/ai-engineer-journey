@@ -11,6 +11,8 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Problem solving
 - Learning resources
 
+## Daily Goal
+Commit something every day and improve gradually.
 
 ## Current Focus
 - Python
