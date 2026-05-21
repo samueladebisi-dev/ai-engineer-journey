@@ -14,6 +14,12 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 ## Daily Goal
 Commit something every day and improve gradually.
 
+## Technologies I'm Learning
+- Python
+- HTML
+- Git
+- Artificial Intelligence
+
 ## Current Focus
 - Python
 - Machine Learning Basics
