@@ -25,7 +25,11 @@ Commit something every day and improve gradually.
 - Machine Learning Basics
 - Git & GitHub
 - Building consistency
+  
 ## Goal
 Stay consistent, improve daily, and build in public.
+
+## Long Term Goal
+Become highly skilled in AI engineering and build impactful technology.
 
 Started: May 2026
