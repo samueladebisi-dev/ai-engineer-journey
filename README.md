@@ -23,6 +23,9 @@ Commit something every day and improve gradually.
 - Git
 - Artificial Intelligence
 
+## Consistency Streak
+Building daily and improving one step at a time.
+
 ## Current Focus
 - Python
 - Machine Learning Basics
