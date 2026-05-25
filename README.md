@@ -11,6 +11,9 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Problem solving
 - Learning resources
 
+## Why This Repository Exists
+To document my progress, stay consistent, and improve my development skills daily.
+
 ## Daily Goal
 Commit something every day and improve gradually.
 
