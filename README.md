@@ -29,11 +29,12 @@ Commit something every day and improve gradually.
 ## Consistency Streak
 Building daily and improving one step at a time.
 
-## Current Focus
-- Python
-- Machine Learning Basics
-- Git & GitHub
-- Building consistency
+## Current Focus Areas
+- Python fundamentals
+- AI concepts
+- GitHub consistency
+- Mini projects
+- Prompt engineering
   
 ## Goal
 Stay consistent, improve daily, and build in public.
