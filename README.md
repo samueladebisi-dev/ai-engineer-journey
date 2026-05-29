@@ -26,6 +26,12 @@ Commit something every day and improve gradually.
 - Git
 - Artificial Intelligence
 
+## Repository Goals
+- Improve coding skills
+- Learn AI engineering
+- Build consistency
+- Practice Git and GitHub daily
+
 ## Consistency Streak
 Building daily and improving one step at a time.
 
