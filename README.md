@@ -41,6 +41,16 @@ Building daily and improving one step at a time.
 - GitHub consistency
 - Mini projects
 - Prompt engineering
+
+## Current Repository Stats
+Folders:
+- Python Practice
+- AI Notes
+- Mini Projects
+- Experiments
+- Learning Log
+- Prompts
+- Resources
   
 ## Goal
 Stay consistent, improve daily, and build in public.
