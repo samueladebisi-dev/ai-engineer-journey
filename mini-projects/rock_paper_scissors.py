@@ -37,3 +37,7 @@ elif (
     print("You win!")
 else:
     print("You lose!")
+
+if user not in choices:
+    print("Invalid choice")
+    exit()
