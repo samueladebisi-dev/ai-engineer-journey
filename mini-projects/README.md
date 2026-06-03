@@ -7,3 +7,11 @@ This folder contains small beginner-friendly projects built while learning progr
 
 - Contact Book
 - Age Calculator
+
+
+## Utility Projects
+
+- Grade Calculator
+- Expense Tracker
+- Contact Book
+- Number Comparison
