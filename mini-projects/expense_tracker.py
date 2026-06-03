@@ -7,5 +7,6 @@ while True:
         break
 
     expenses.append(float(amount))
-
+    
 print("Total Expenses:", sum(expenses))
+print("Number of Entries:", len(expenses))
