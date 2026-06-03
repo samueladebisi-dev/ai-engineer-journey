@@ -26,6 +26,10 @@ Commit something every day and improve gradually.
 - Git
 - Artificial Intelligence
 
+## Learning Progress
+
+This repository grows daily through notes, experiments, mini-projects, prompts, and coding practice.
+
 ## Repository Goals
 - Improve coding skills
 - Learn AI engineering
