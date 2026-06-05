@@ -8,3 +8,5 @@
 - Cursor
 - NotebookLM
 - LM Studio
+- Ollama
+- AnythingLLM
