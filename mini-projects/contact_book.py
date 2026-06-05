@@ -6,3 +6,4 @@ phone = input("Enter phone number: ")
 contacts[name] = phone
 
 print(contacts)
+print("Total contacts:", len(contacts))
