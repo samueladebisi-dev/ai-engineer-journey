@@ -15,3 +15,9 @@ This folder contains small beginner-friendly projects built while learning progr
 - Expense Tracker
 - Contact Book
 - Number Comparison
+
+## Productivity Projects
+
+- Expense Tracker
+- Contact Book
+- Login Simulator
