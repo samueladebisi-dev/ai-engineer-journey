@@ -8,6 +8,10 @@ This folder contains small beginner-friendly projects built while learning progr
 - Contact Book
 - Age Calculator
 
+## Games
+
+- Rock Paper Scissors
+- Number Comparison
 
 ## Utility Projects
 
