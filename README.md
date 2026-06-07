@@ -63,3 +63,8 @@ Stay consistent, improve daily, and build in public.
 Become highly skilled in AI engineering and build impactful technology.
 
 Started: May 2026
+
+
+## Day 20 Milestone
+
+Twenty days of consistent contributions, learning, and project building.
