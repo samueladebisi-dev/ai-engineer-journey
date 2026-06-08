@@ -25,3 +25,9 @@ This folder contains small beginner-friendly projects built while learning progr
 - Expense Tracker
 - Contact Book
 - Login Simulator
+
+## Educational Projects
+
+- Python Quiz
+- Grade Calculator
+- Temperature Converter
