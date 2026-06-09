@@ -9,6 +9,7 @@ while attempts > 0:
 
     if user == username and pwd == password:
         print("Login successful")
+        print("Welcome back!")
         break
 
     attempts -= 1
