@@ -39,13 +39,14 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 ## Consistency Streak
 Building daily and improving one step at a time.
 
-## Current Focus Areas
-- Python fundamentals
-- AI concepts
-- GitHub consistency
-- Mini projects
-- Prompt engineering
+## Current Focus
 
+- Python Fundamentals
+- AI Concepts
+- Mini Projects
+- Prompt Engineering
+- Git & GitHub
+  
 ## Current Repository Stats
 Folders:
 - Python Practice
