@@ -46,6 +46,14 @@ Building daily and improving one step at a time.
 - Mini Projects
 - Prompt Engineering
 - Git & GitHub
+
+## What I'm Learning
+
+- Python Programming
+- Machine Learning Fundamentals
+- AI Concepts
+- Git and GitHub
+- Project Building
   
 ## Current Repository Stats
 Folders:
