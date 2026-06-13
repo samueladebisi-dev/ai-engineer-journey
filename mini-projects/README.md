@@ -2,6 +2,9 @@
 
 This folder contains small beginner-friendly projects built while learning programming and AI engineering.
 
+## Mini Project Collection
+
+The repository contains a growing collection of beginner Python projects, experiments, AI notes, and learning resources.
 
 ## Recently Added
 
