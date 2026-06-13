@@ -10,3 +10,8 @@ while True:
     
 print("Total Expenses:", sum(expenses))
 print("Number of Entries:", len(expenses))
+
+
+average = sum(expenses) / len(expenses)
+
+print("Average Expense:", average)
