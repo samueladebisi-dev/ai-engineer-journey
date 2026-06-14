@@ -6,3 +6,6 @@
 - NLP Engineer
 - Computer Vision Engineer
 - Robotics Engineer
+- AI Researcher
+- MLOps Engineer
+- AI Product Manager
