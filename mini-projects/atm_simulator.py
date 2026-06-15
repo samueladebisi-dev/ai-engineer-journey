@@ -7,3 +7,5 @@ if amount <= balance:
     print("Remaining balance:", balance)
 else:
     print("Insufficient funds")
+
+print("Thank you for using our ATM.")
