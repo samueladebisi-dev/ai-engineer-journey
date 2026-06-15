@@ -11,3 +11,7 @@ elif balance < 0:
     print("You spent more than you earned.")
 else:
     print("You broke even.")
+
+savings_rate = (balance / income) * 100
+
+print("Savings Rate:", round(savings_rate, 2), "%")
