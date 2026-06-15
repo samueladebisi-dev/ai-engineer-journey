@@ -46,14 +46,6 @@ Building daily and improving one step at a time.
 - Mini Projects
 - Prompt Engineering
 - Git & GitHub
-
-## What I'm Learning
-
-- Python Programming
-- Machine Learning Fundamentals
-- AI Concepts
-- Git and GitHub
-- Project Building
   
 ## Current Repository Stats
 Folders:
@@ -67,6 +59,10 @@ Folders:
   
 ## Goal
 Stay consistent, improve daily, and build in public.
+
+## Repository Growth
+
+This repository documents my journey from Python fundamentals toward AI engineering through daily practice, projects, notes, and experiments.
 
 ## Long Term Goal
 Become highly skilled in AI engineering and build impactful technology.
