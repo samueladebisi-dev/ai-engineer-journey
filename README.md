@@ -11,6 +11,17 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Problem solving
 - Learning resources
 
+## 30-Day Milestone
+
+Completed 30 consecutive days of learning, coding, documenting, and building.
+
+Current focus:
+- Python
+- Machine Learning
+- AI Engineering
+- Git & GitHub
+- Project Development
+
  ## Repository Structure
 This repository is organized into practice, experiments, projects, notes, prompts, and resources to track my learning journey.
 
