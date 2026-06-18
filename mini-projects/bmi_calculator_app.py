@@ -12,3 +12,4 @@ elif bmi < 25:
     print("Normal")
 else:
     print("Overweight")
+print("Health assessment complete.")
