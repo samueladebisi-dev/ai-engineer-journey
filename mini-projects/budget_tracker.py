@@ -15,3 +15,8 @@ else:
 savings_rate = (balance / income) * 100
 
 print("Savings Rate:", round(savings_rate, 2), "%")
+
+if balance >= 0:
+    print("Financial status: Stable")
+else:
+    print("Financial status: Deficit")
