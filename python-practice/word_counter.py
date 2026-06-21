@@ -1,5 +1,5 @@
-text = input("Enter a sentence: ")
+sentence = input("Enter a sentence: ")
 
-words = text.split()
+words = sentence.split()
 
 print("Word count:", len(words))
