@@ -2,8 +2,10 @@
 
 Review this Python code.
 
+Find bugs and edge cases.
+
 Suggest performance improvements.
 
-Suggest readability improvements.
+Suggest better variable names.
 
-Identify potential bugs.
+How can this code be made more maintainable?
