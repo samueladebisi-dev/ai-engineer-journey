@@ -1,10 +1,13 @@
 # Supervised Learning
 
-Supervised learning is a machine learning approach where models learn from labeled data.
+Supervised learning uses labeled data to train models.
 
 Examples:
-- Email spam detection
 - House price prediction
+- Spam detection
 - Image classification
 
-The model learns from examples that already have correct answers.
+Popular algorithms:
+- Linear Regression
+- Logistic Regression
+- Decision Trees
