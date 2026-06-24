@@ -11,31 +11,11 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Problem solving
 - Learning resources
 
-## 30-Day Milestone
-
-Completed 30 consecutive days of learning, coding, documenting, and building.
-
-Current focus:
-- Python
-- Machine Learning
-- AI Engineering
-- Git & GitHub
-- Project Development
-
  ## Repository Structure
 This repository is organized into practice, experiments, projects, notes, prompts, and resources to track my learning journey.
 
 ## Why This Repository Exists
 To document my progress, stay consistent, and improve my development skills daily.
-
-## Daily Goal
-Commit something every day and improve gradually.
-
-## Technologies I'm Learning
-- Python
-- HTML
-- Git
-- Artificial Intelligence
 
 ## Learning Progress
 
@@ -46,9 +26,6 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Learn AI engineering
 - Build consistency
 - Practice Git and GitHub daily
-
-## Consistency Streak
-Building daily and improving one step at a time.
 
 ## Current Focus
 
@@ -67,9 +44,6 @@ Folders:
 - Learning Log
 - Prompts
 - Resources
-  
-## Goal
-Stay consistent, improve daily, and build in public.
 
 ## Repository Growth
 
@@ -80,7 +54,3 @@ Become highly skilled in AI engineering and build impactful technology.
 
 Started: May 2026
 
-
-## Day 20 Milestone
-
-Twenty days of consistent contributions, learning, and project building.
