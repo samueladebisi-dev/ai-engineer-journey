@@ -1,9 +1,10 @@
-text = input("Enter text: ")
+words_list = text.lower().split()
 
-words = len(text.split())
-characters = len(text)
-sentences = text.count(".") + text.count("!") + text.count("?")
+word_counts = {}
 
-print(f"Words: {words}")
-print(f"Characters: {characters}")
-print(f"Sentences: {sentences}")
+for word in words_list:
+    word_counts[word] = word_counts.get(word, 0) + 1
+
+most_common = max(word_counts, key=word_counts.get)
+
+print("Most Common Word:", most_common)
