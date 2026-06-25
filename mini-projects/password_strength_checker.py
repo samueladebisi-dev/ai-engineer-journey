@@ -1,8 +1,14 @@
 password = input("Enter password: ")
 
-if len(password) >= 12:
-    print("Strong Password")
-elif len(password) >= 8:
-    print("Moderate Password")
-else:
-    print("Weak Password")
+score = 0
+
+if len(password) >= 8:
+    score += 1
+
+if any(char.isdigit() for char in password):
+    score += 1
+
+if any(char.isupper() for char in password):
+    score += 1
+
+print("Strength Score:", score, "/3")
