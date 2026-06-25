@@ -1,10 +1,9 @@
 # Prompt Engineering Basics
 
-Prompt engineering is the process of writing better instructions for AI systems.
+Explain prompt engineering.
 
-Good prompts are:
-- Clear
-- Specific
-- Structured
+How can prompts improve AI outputs?
 
-Better prompts usually produce better AI responses.
+Give examples of good prompts.
+
+Give examples of bad prompts.
