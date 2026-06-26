@@ -36,16 +36,18 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Confusion Matrix
 - Model Evaluation
   
-## Current Repository Stats
-Folders:
-- Python Practice
-- AI Notes
-- Mini Projects
-- Experiments
-- Learning Log
-- Prompts
-- Resources
 
+## Ongoing Projects
+
+### CLI Expense Tracker
+Status: In Progress
+
+Planned Features:
+- Add expenses
+- Delete expenses
+- Save to JSON
+- Monthly summaries
+- Expense categories
 ## Repository Growth
 
 This repository documents my journey from Python fundamentals toward AI engineering through daily practice, projects, notes, and experiments.
