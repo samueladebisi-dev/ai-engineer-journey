@@ -27,13 +27,14 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Build consistency
 - Practice Git and GitHub daily
 
-## Current Focus
+## AI Topics Covered
 
-- Python Fundamentals
-- AI Concepts
-- Mini Projects
-- Prompt Engineering
-- Git & GitHub
+- Supervised Learning
+- Gradient Descent
+- Precision
+- Recall
+- Confusion Matrix
+- Model Evaluation
   
 ## Current Repository Stats
 Folders:
