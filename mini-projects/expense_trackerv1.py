@@ -22,3 +22,7 @@ while True:
 
     elif choice == "3":
         break
+
+total = sum(expense["amount"] for expense in expenses)
+
+print(f"\nTotal Spent: ₦{total}")
