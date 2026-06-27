@@ -1,3 +1,13 @@
+import json
+import os
+
+
+if os.path.exists("expenses.json"):
+    with open("expenses.json", "r") as file:
+        expenses = json.load(file)
+else:
+    expenses = []
+    
 expenses = []
 
 while True:
