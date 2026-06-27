@@ -36,3 +36,7 @@ while True:
 total = sum(expense["amount"] for expense in expenses)
 
 print(f"\nTotal Spent: ₦{total}")
+
+
+with open("expenses.json", "w") as file:
+    json.dump(expenses, file, indent=4)
