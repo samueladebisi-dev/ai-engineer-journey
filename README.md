@@ -48,6 +48,15 @@ Planned Features:
 - Save to JSON
 - Monthly summaries
 - Expense categories
+
+  ## Current Long-Term Projects
+
+### Expense Tracker
+A CLI application for managing personal expenses with persistent JSON storage.
+
+### Dataset Explorer
+A CLI tool for inspecting CSV datasets before analysis.
+
 ## Repository Growth
 
 This repository documents my journey from Python fundamentals toward AI engineering through daily practice, projects, notes, and experiments.
