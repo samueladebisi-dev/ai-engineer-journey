@@ -11,3 +11,11 @@ try:
 
 except FileNotFoundError:
     print("File not found.")
+
+
+rows = list(reader)
+
+print(f"Rows: {len(rows)}")
+
+if rows:
+    print(f"Columns: {len(rows[0])}")
