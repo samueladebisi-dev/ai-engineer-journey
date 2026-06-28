@@ -38,3 +38,16 @@ elif choice == "4":
         print("Expense deleted.")
     else:
         print("Invalid selection.")
+        
+category = input("Category: ")
+
+expenses.append({
+    "name": name,
+    "amount": amount,
+    "category": category
+})
+
+
+print(
+    f"{expense['name']} | {expense['category']} | ₦{expense['amount']}"
+)
