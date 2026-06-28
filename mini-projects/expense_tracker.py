@@ -15,3 +15,26 @@ print("Number of Entries:", len(expenses))
 average = sum(expenses) / len(expenses)
 
 print("Average Expense:", average)
+
+print("4. Delete Expense")
+
+
+elif choice == "4":
+    if not expenses:
+        print("No expenses to delete.")
+        continue
+
+    for index, expense in enumerate(expenses, start=1):
+        print(f"{index}. {expense['name']} - ₦{expense['amount']}")
+
+    delete_index = int(input("Enter expense number: ")) - 1
+
+    if 0 <= delete_index < len(expenses):
+        expenses.pop(delete_index)
+
+        with open("expenses.json", "w") as file:
+            json.dump(expenses, file, indent=4)
+
+        print("Expense deleted.")
+    else:
+        print("Invalid selection.")
