@@ -51,3 +51,18 @@ print(f"\nTotal Spent: ₦{total}")
 
 with open("expenses.json", "w") as file:
     json.dump(expenses, file, indent=4)
+
+category = input("Category: ")
+
+
+expenses.append({
+    "name": name,
+    "amount": amount,
+    "category": category
+})
+
+print(
+    f"{expense['name']} | "
+    f"{expense['category']} | "
+    f"₦{expense['amount']}"
+)
