@@ -33,6 +33,17 @@ while True:
     elif choice == "3":
         break
 
+def add_expense(expenses):
+    name = input("Expense name: ")
+    amount = float(input("Amount: "))
+
+    expenses.append({
+        "name": name,
+        "amount": amount
+    })
+
+    return expenses
+
 total = sum(expense["amount"] for expense in expenses)
 
 print(f"\nTotal Spent: ₦{total}")
