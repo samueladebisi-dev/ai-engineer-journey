@@ -52,3 +52,25 @@ for expense in expenses:
     print(
         f"{expense['name']} | {expense['category']} | ₦{expense['amount']}"
     )
+    
+print("5. Edit Expense")
+
+
+elif choice == "5":
+    if not expenses:
+        print("No expenses available.")
+        continue
+
+    for index, expense in enumerate(expenses, start=1):
+        print(f"{index}. {expense['name']} - ₦{expense['amount']}")
+
+    edit_index = int(input("Select expense: ")) - 1
+
+    if 0 <= edit_index < len(expenses):
+        expenses[edit_index]["name"] = input("New name: ")
+        expenses[edit_index]["amount"] = float(input("New amount: "))
+        expenses[edit_index]["category"] = input("New category: ")
+
+        save_json("expenses.json", expenses)
+
+        print("Expense updated successfully.")
