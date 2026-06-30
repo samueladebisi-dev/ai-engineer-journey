@@ -24,3 +24,5 @@ print(f"Rows: {len(rows)}")
 
 if rows:
     print(f"Columns: {len(rows[0])}")
+    print(f"\nTotal Columns: {len(rows[0])}")
+    print(f"Total Records: {len(rows)-1}")
