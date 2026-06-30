@@ -48,6 +48,7 @@ expenses.append({
 })
 
 
-print(
-    f"{expense['name']} | {expense['category']} | ₦{expense['amount']}"
-)
+for expense in expenses:
+    print(
+        f"{expense['name']} | {expense['category']} | ₦{expense['amount']}"
+    )
