@@ -58,6 +58,14 @@ Planned Features:
 - Monthly summaries
 - Expense categories
 
+### Current Features
+
+- Add expenses
+- View expenses
+- Delete expenses
+- Expense categories
+- JSON storage
+
   ## Current Long-Term Projects
 
 ### Expense Tracker
