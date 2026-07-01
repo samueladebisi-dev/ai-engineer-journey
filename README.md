@@ -36,6 +36,15 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Confusion Matrix
 - Model Evaluation
   
+## Skills Practiced
+
+- Python
+- JSON
+- CSV Processing
+- File Handling
+- Command Line Applications
+- Software Testing
+- Machine Learning Fundamentals
 
 ## Ongoing Projects
 
