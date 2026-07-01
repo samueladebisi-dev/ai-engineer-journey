@@ -8,4 +8,4 @@ Today I:
 - Practiced JSON parsing.
 - Started writing unit tests.
 
-This was my first step toward writing more maintainable software.
+This was my initial step toward writing more maintainable software.
