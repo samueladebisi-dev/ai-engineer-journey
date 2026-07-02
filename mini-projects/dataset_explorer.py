@@ -26,3 +26,10 @@ if rows:
     print(f"Columns: {len(rows[0])}")
     print(f"\nTotal Columns: {len(rows[0])}")
     print(f"Total Records: {len(rows)-1}")
+    
+missing = 0
+
+for row in rows[1:]:
+    missing += row.count("")
+
+print(f"Missing Values: {missing}")
