@@ -74,3 +74,20 @@ elif choice == "5":
         save_json("expenses.json", expenses)
 
         print("Expense updated successfully.")
+        
+        
+print("6. Search Expense")
+
+
+elif choice == "6":
+    keyword = input("Enter expense name: ").lower()
+
+    found = False
+
+    for expense in expenses:
+        if keyword in expense["name"].lower():
+            print(f"{expense['name']} | {expense['category']} | ₦{expense['amount']}")
+            found = True
+
+    if not found:
+        print("No matching expense found.")
