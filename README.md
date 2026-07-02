@@ -46,6 +46,22 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Software Testing
 - Machine Learning Fundamentals
 
+## Current Progress
+
+### Expense Tracker
+- Add expenses
+- Edit expenses
+- Delete expenses
+- Search expenses
+- Categories
+- JSON storage
+
+### Dataset Explorer
+- Preview data
+- Count records
+- Count columns
+- Detect missing values
+
 ## Ongoing Projects
 
 ### CLI Expense Tracker
