@@ -1,93 +1,180 @@
-expenses = []
+import json
+import os
 
-while True:
-    amount = input("Enter expense (or quit): ")
-
-    if amount.lower() == "quit":
-        break
-
-    expenses.append(float(amount))
-    
-print("Total Expenses:", sum(expenses))
-print("Number of Entries:", len(expenses))
+FILE_NAME = "expenses.json"
 
 
-average = sum(expenses) / len(expenses)
+def load_expenses():
+    if os.path.exists(FILE_NAME):
+        with open(FILE_NAME, "r") as file:
+            return json.load(file)
+    return []
 
-print("Average Expense:", average)
 
-print("4. Delete Expense")
+def save_expenses(expenses):
+    with open(FILE_NAME, "w") as file:
+        json.dump(expenses, file, indent=4)
 
 
-elif choice == "4":
+def add_expense(expenses):
+    name = input("Expense name: ")
+    category = input("Category: ")
+
+    while True:
+        try:
+            amount = float(input("Amount: ₦"))
+            break
+        except ValueError:
+            print("Please enter a valid amount.")
+
+    expenses.append({
+        "name": name,
+        "category": category,
+        "amount": amount
+    })
+
+    save_expenses(expenses)
+    print("Expense added successfully.\n")
+
+
+def view_expenses(expenses):
     if not expenses:
-        print("No expenses to delete.")
-        continue
+        print("No expenses found.\n")
+        return
+
+    total = 0
+
+    print("\nExpenses")
+    print("-" * 40)
 
     for index, expense in enumerate(expenses, start=1):
-        print(f"{index}. {expense['name']} - ₦{expense['amount']}")
+        print(
+            f"{index}. {expense['name']} | "
+            f"{expense['category']} | "
+            f"₦{expense['amount']:.2f}"
+        )
+        total += expense["amount"]
 
-    delete_index = int(input("Enter expense number: ")) - 1
-
-    if 0 <= delete_index < len(expenses):
-        expenses.pop(delete_index)
-
-        with open("expenses.json", "w") as file:
-            json.dump(expenses, file, indent=4)
-
-        print("Expense deleted.")
-    else:
-        print("Invalid selection.")
-        
-category = input("Category: ")
-
-expenses.append({
-    "name": name,
-    "amount": amount,
-    "category": category
-})
+    print("-" * 40)
+    print(f"Total Expenses: ₦{total:.2f}")
+    print(f"Number of Entries: {len(expenses)}")
+    print(f"Average Expense: ₦{total / len(expenses):.2f}\n")
 
 
-for expense in expenses:
-    print(
-        f"{expense['name']} | {expense['category']} | ₦{expense['amount']}"
-    )
-    
-print("5. Edit Expense")
-
-
-elif choice == "5":
+def delete_expense(expenses):
     if not expenses:
-        print("No expenses available.")
-        continue
+        print("No expenses to delete.\n")
+        return
 
-    for index, expense in enumerate(expenses, start=1):
-        print(f"{index}. {expense['name']} - ₦{expense['amount']}")
+    view_expenses(expenses)
 
-    edit_index = int(input("Select expense: ")) - 1
+    try:
+        index = int(input("Enter expense number to delete: ")) - 1
 
-    if 0 <= edit_index < len(expenses):
-        expenses[edit_index]["name"] = input("New name: ")
-        expenses[edit_index]["amount"] = float(input("New amount: "))
-        expenses[edit_index]["category"] = input("New category: ")
+        if 0 <= index < len(expenses):
+            deleted = expenses.pop(index)
+            save_expenses(expenses)
+            print(f"{deleted['name']} deleted successfully.\n")
+        else:
+            print("Invalid expense number.\n")
 
-        save_json("expenses.json", expenses)
-
-        print("Expense updated successfully.")
-        
-        
-print("6. Search Expense")
+    except ValueError:
+        print("Please enter a valid number.\n")
 
 
-elif choice == "6":
-    keyword = input("Enter expense name: ").lower()
+def edit_expense(expenses):
+    if not expenses:
+        print("No expenses available.\n")
+        return
+
+    view_expenses(expenses)
+
+    try:
+        index = int(input("Enter expense number to edit: ")) - 1
+
+        if 0 <= index < len(expenses):
+            expenses[index]["name"] = input("New name: ")
+            expenses[index]["category"] = input("New category: ")
+
+            while True:
+                try:
+                    expenses[index]["amount"] = float(
+                        input("New amount: ₦")
+                    )
+                    break
+                except ValueError:
+                    print("Please enter a valid amount.")
+
+            save_expenses(expenses)
+            print("Expense updated successfully.\n")
+
+        else:
+            print("Invalid expense number.\n")
+
+    except ValueError:
+        print("Please enter a valid number.\n")
+
+
+def search_expense(expenses):
+    if not expenses:
+        print("No expenses available.\n")
+        return
+
+    keyword = input("Search: ").lower()
 
     found = False
 
+    print()
+
     for expense in expenses:
-        if keyword in expense["name"].lower():
-            print(f"{expense['name']} | {expense['category']} | ₦{expense['amount']}")
+        if (
+            keyword in expense["name"].lower()
+            or keyword in expense["category"].lower()
+        ):
+            print(
+                f"{expense['name']} | "
+                f"{expense['category']} | "
+                f"₦{expense['amount']:.2f}"
+            )
             found = True
 
     if not found:
-        print("No matching expense found.")
+        print("No matching expenses found.")
+
+    print()
+
+
+expenses = load_expenses()
+
+while True:
+    print("====== Expense Tracker ======")
+    print("1. Add Expense")
+    print("2. View Expenses")
+    print("3. Delete Expense")
+    print("4. Edit Expense")
+    print("5. Search Expense")
+    print("6. Exit")
+
+    choice = input("Choose an option: ")
+
+    if choice == "1":
+        add_expense(expenses)
+
+    elif choice == "2":
+        view_expenses(expenses)
+
+    elif choice == "3":
+        delete_expense(expenses)
+
+    elif choice == "4":
+        edit_expense(expenses)
+
+    elif choice == "5":
+        search_expense(expenses)
+
+    elif choice == "6":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Invalid option. Please try again.\n")
