@@ -17,10 +17,6 @@ This repository is organized into practice, experiments, projects, notes, prompt
 ## Why This Repository Exists
 To document my progress, stay consistent, and improve my development skills daily.
 
-## Learning Progress
-
-This repository grows daily through notes, experiments, mini-projects, prompts, and coding practice.
-
 ## Repository Goals
 - Improve coding skills
 - Learn AI engineering
@@ -45,6 +41,16 @@ This repository grows daily through notes, experiments, mini-projects, prompts, 
 - Command Line Applications
 - Software Testing
 - Machine Learning Fundamentals
+
+## Development Practices
+
+This repository follows a gradual software engineering approach by:
+
+- Writing reusable functions
+- Adding type hints
+- Creating unit tests
+- Organizing projects into logical folders
+- Documenting learning progress
 
 ## Current Progress
 
@@ -74,15 +80,7 @@ Planned Features:
 - Monthly summaries
 - Expense categories
 
-### Current Features
-
-- Add expenses
-- View expenses
-- Delete expenses
-- Expense categories
-- JSON storage
-
-  ## Current Long-Term Projects
+## Current Long-Term Projects
 
 ### Expense Tracker
 A CLI application for managing personal expenses with persistent JSON storage.
