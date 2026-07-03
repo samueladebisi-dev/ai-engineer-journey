@@ -1,13 +1,31 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
+import importlib.util
 
-# from self.assertTrue(True).utils import save_json
+UTILS_PATH = Path(__file__).resolve().parent.parent / "mini-projects" / "utils.py"
+
+spec = importlib.util.spec_from_file_location("utils", UTILS_PATH)
+utils = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(utils)
 
 
-class TestUtils(unittest.TestCase):
+class TestJsonUtils(unittest.TestCase):
 
-    def test_module_import(self):
-        # self.assertTrue(callable(save_json))
+    def test_save_and_load_json(self):
+        with tempfile.NamedTemporaryFile(delete=False) as temp:
+            filename = temp.name
 
+        data = [
+            {"name": "Transport", "amount": 2000}
+        ]
+
+        utils.save_json(filename, data)
+
+        loaded = utils.load_json(filename)
+
+        self.assertEqual(data, loaded)
 
 
 if __name__ == "__main__":
