@@ -54,21 +54,11 @@ This repository follows a gradual software engineering approach by:
 
 ## Current Progress
 
-### Expense Tracker
-- Add expenses
-- Edit expenses
-- Delete expenses
-- Search expenses
-- Categories
-- JSON storage
-
 ### Dataset Explorer
 - Preview data
 - Count records
 - Count columns
 - Detect missing values
-
-## Ongoing Projects
 
 ### CLI Expense Tracker
 Status: In Progress
@@ -80,13 +70,14 @@ Planned Features:
 - Monthly summaries
 - Expense categories
 
-## Current Long-Term Projects
+## Technologies Used
 
-### Expense Tracker
-A CLI application for managing personal expenses with persistent JSON storage.
-
-### Dataset Explorer
-A CLI tool for inspecting CSV datasets before analysis.
+- Python
+- JSON
+- CSV
+- pathlib
+- unittest
+- pytest
 
 ## Repository Growth
 
