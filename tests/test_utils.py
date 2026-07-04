@@ -26,6 +26,10 @@ class TestJsonUtils(unittest.TestCase):
         loaded = utils.load_json(filename)
 
         self.assertEqual(data, loaded)
+        
+        def test_load_missing_file(self):
+        data = utils.load_json("file_that_does_not_exist.json")
+        self.assertEqual(data, [])
 
 
 if __name__ == "__main__":
