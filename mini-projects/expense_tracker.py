@@ -1,9 +1,10 @@
 from utils import save_json, load_json
+from config import DATA_FILE
 import os
 
 
-if os.path.exists("expenses.json"):
-    with open("expenses.json", "r") as file:
+if os.path.exists(DATA_FILE):
+    with open(DATA_FILE, "r") as file:
         expenses = json.load(file)
 else:
     expenses = []
@@ -57,7 +58,7 @@ total = sum(expense["amount"] for expense in expenses)
 print(f"\nTotal Spent: ₦{total}")
 
 
-with open("expenses.json", "w") as file:
+with open(DATA_FILE, "w") as file:
     json.dump(expenses, file, indent=4)
 
 category = input("Category: ")
