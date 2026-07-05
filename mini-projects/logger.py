@@ -1,5 +1,7 @@
 from datetime import datetime
 
-def log(message: str) -> None:
+def log(message: str, level: str = "INFO") -> None:
     with open("app.log", "a") as file:
-        file.write(f"[{datetime.now()}] {message}\n")
+        file.write(
+            f"[{datetime.now()}] [{level}] {message}\n"
+        )
