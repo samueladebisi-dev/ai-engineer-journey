@@ -1,3 +1,4 @@
+from fileinput import filename
 import json
 import tempfile
 import unittest
@@ -26,6 +27,18 @@ class TestJsonUtils(unittest.TestCase):
         loaded = utils.load_json(filename)
 
         self.assertEqual(data, loaded)
+     
+    def test_save_empty_list(self):
+        import tempfile
+
+        with tempfile.NamedTemporaryFile(delete=False) as temp:
+            filename = temp.name
+
+        utils.save_json(filename, [])
+
+        loaded = utils.load_json(filename)
+
+        self.assertEqual([], loaded)
         
     def test_load_missing_file(self):
         data = utils.load_json("file_that_does_not_exist.json")
