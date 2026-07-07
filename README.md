@@ -83,8 +83,9 @@ Planned Features:
 
 This repository documents my journey from Python fundamentals toward AI engineering through daily practice, projects, notes, and experiments.
 
-## Long Term Goal
-Become highly skilled in AI engineering and build impactful technology.
+## Repository Goals
+
+This repository documents my journey toward becoming an AI Engineer by consistently building projects, improving code quality, writing tests, and learning software engineering best practices.
 
 Started: May 2026
 
