@@ -12,7 +12,16 @@ else:
     
 expenses = []
 
-
+def display_menu() -> None:
+    print("\nExpense Tracker")
+    print("1. Add Expense")
+    print("2. View Expenses")
+    print("3. Delete Expense")
+    print("4. Exit")
+    print("5. Edit Expense")
+    print("6. Search Expense")
+    
+    
 def display_expense(expense: dict) -> None:
     print(
         f"{expense['name']} | "
@@ -70,4 +79,6 @@ expenses.append({
     "amount": amount,
     "category": category
 })
+
+display_menu()
 
