@@ -43,6 +43,16 @@ class TestJsonUtils(unittest.TestCase):
     def test_load_missing_file(self):
         data = utils.load_json("file_that_does_not_exist.json")
         self.assertEqual(data, [])
+        
+    def test_load_invalid_json(self):
+        import tempfile
+
+        with tempfile.NamedTemporaryFile(mode="w", delete=False) as temp:
+            temp.write("invalid json")
+            filename = temp.name
+
+        with self.assertRaises(Exception):
+            utils.load_json(filename)
 
 
 if __name__ == "__main__":
