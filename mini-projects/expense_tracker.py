@@ -62,11 +62,14 @@ def main() -> None:
             "name": name,
             "amount": amount
         })
+    def calculate_total(expenses: list[dict]) -> float:
+        return sum(expense["amount"] for expense in expenses)
+    
+    
+    print(f"\nTotal Expenses: ₦{calculate_total(expenses):,.2f}")
 
-        return expenses
-
-    total = sum(expense["amount"] for expense in expenses)
-
+    total = calculate_total(expenses)
+    
     print(f"\nTotal Spent: ₦{total}")
 
 
@@ -87,7 +90,7 @@ def main() -> None:
 
         choice = input("Select an option: ")
         
-        
+    
 
 if __name__ == "__main__":
     main()
