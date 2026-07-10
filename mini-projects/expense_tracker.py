@@ -92,7 +92,9 @@ def main() -> None:
 
             choice = input("Select an option: ")
             
-        
+        avg = average(exp["amount"] for exp in expenses)
+        print(f"Average Expense: ₦{avg:.2f}")
+    
     except InvalidExpenseError as e:
         print(e)
 
