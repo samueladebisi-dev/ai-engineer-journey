@@ -5,3 +5,5 @@ def log(message: str, level: str = "INFO") -> None:
         file.write(
             f"[{datetime.now()}] [{level}] {message}\n"
         )
+        
+log(f"Deleted expense: {deleted['name']}")        
