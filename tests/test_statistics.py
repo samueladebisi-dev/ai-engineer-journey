@@ -14,6 +14,8 @@ class TestStatistics(unittest.TestCase):
     def test_average(self):
         self.assertEqual(statistics.average([2,4,6]),4)
 
+    def test_average_empty(self):
+        self.assertEqual(statistics.average([]), 0)
 
 if __name__ == "__main__":
     unittest.main()
