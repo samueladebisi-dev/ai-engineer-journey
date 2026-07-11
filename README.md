@@ -63,6 +63,16 @@ This repository follows a gradual software engineering approach by:
 ### CLI Expense Tracker
 Status: In Progress
 
+### Current Features
+
+- Add expenses
+- View expenses
+- Delete expenses
+- Automatic JSON storage
+- Total expense calculation
+- Average expense calculation
+- Input validation
+
 Planned Features:
 - Add expenses
 - Delete expenses
