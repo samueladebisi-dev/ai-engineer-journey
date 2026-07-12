@@ -16,6 +16,12 @@ class TestStatistics(unittest.TestCase):
 
     def test_average_empty(self):
         self.assertEqual(statistics.average([]), 0)
+        
+    def test_maximum(self):
+        self.assertEqual(statistics.maximum([10, 5, 20, 8]), 20)
+
+    def test_maximum_empty(self):
+        self.assertEqual(statistics.maximum([]), 0)
 
 if __name__ == "__main__":
     unittest.main()
