@@ -9,9 +9,9 @@
 - Total spending
 - Average spending
 - Logging
+- Search expenses
 
 Future features:
 
 - Edit expenses
-- Search expenses
 - Monthly reports
