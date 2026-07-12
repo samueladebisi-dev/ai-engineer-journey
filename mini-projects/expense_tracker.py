@@ -2,7 +2,7 @@ import json
 from config import DATA_FILE
 from exceptions import InvalidExpenseError
 import os
-from statistics import average
+from statistics import average, maximum
 
 def display_menu() -> None:
     print("\nExpense Tracker")
@@ -83,9 +83,11 @@ def view_expenses(expenses: list[dict]) -> None:
     total = calculate_total(expenses)
     
     amounts = [expense["amount"] for expense in expenses]
-
+    
+    maximum = maximum(amounts)
     avg = average(amounts)
 
+    print(f"Highest Expense: ₦{maximum:,.2f}")
     print(f"Average Expense: ₦{avg:,.2f}")
     print(f"\nTotal Spent: ₦{total:,.2f}")
 
