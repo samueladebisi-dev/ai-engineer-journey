@@ -9,7 +9,8 @@ def display_menu() -> None:
     print("1. Add Expense")
     print("2. View Expenses")
     print("3. Delete Expense")
-    print("4. Exit")
+    print("4. Search by Category")
+    print("5. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -108,6 +109,23 @@ def delete_expense(expenses: list[dict]) -> None:
     except ValueError:
         print("Please enter a valid number.")
         
+def search_by_category(expenses: list[dict]) -> None:
+    category = input("Category: ").strip().lower()
+
+    results = [
+        expense for expense in expenses
+        if expense["category"].lower() == category
+    ]
+
+    if not results:
+        print("No matching expenses.")
+        return
+
+    for index, expense in enumerate(results, start=1):
+        print(f"{index}. ", end="")
+        display_expense(expense)
+        
+        
 def main() -> None:
     expenses = load_expenses()
 
@@ -126,6 +144,9 @@ def main() -> None:
             delete_expense(expenses)
 
         elif choice == "4":
+            search_by_category(expenses)
+            
+        elif choice == "5":
             print("Goodbye!")
             break
         else:
