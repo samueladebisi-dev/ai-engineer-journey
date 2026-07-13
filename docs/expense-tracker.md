@@ -11,7 +11,13 @@
 - Logging
 - Search expenses
 
-Future features:
+## New Features
+
+- Edit existing expenses.
+- Search expenses by category.
+- View highest and lowest expenses.
+
+## Future features:
 
 - Edit expenses
 - Monthly reports
