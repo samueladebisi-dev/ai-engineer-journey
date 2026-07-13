@@ -6,3 +6,6 @@ def average(values: list[float]) -> float:
 
 def maximum(values: list[float]) -> float:
     return max(values) if values else 0
+
+def minimum(values: list[float]) -> float:
+    return min(values) if values else 0
