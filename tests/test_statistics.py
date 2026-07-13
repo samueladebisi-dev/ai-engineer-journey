@@ -22,6 +22,12 @@ class TestStatistics(unittest.TestCase):
 
     def test_maximum_empty(self):
         self.assertEqual(statistics.maximum([]), 0)
+        
+    def test_minimum(self):
+        self.assertEqual(statistics.minimum([7, 3, 10]), 3)
+
+    def test_minimum_empty(self):
+        self.assertEqual(statistics.minimum([]), 0)
 
 if __name__ == "__main__":
     unittest.main()
