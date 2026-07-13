@@ -10,7 +10,8 @@ def display_menu() -> None:
     print("2. View Expenses")
     print("3. Delete Expense")
     print("4. Search by Category")
-    print("5. Exit")
+    print("5. Edit Expense")
+    print("6. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -127,7 +128,45 @@ def search_by_category(expenses: list[dict]) -> None:
         print(f"{index}. ", end="")
         display_expense(expense)
         
+def edit_expense(expenses: list[dict]) -> None:
+    if not expenses:
+        print("No expenses available.")
+        return
+
+    view_expenses(expenses)
+
+    try:
+        index = int(input("\nEnter expense number to edit: ")) - 1
+
+        if not 0 <= index < len(expenses):
+            print("Invalid expense number.")
+            return
+
+        expense = expenses[index]
+
+        expense["name"] = input(
+            f"Name ({expense['name']}): "
+        ) or expense["name"]
+
+        expense["category"] = input(
+            f"Category ({expense['category']}): "
+        ) or expense["category"]
+
+        amount = input(
+            f"Amount ({expense['amount']}): "
+        )
+
+        if amount:
+            expense["amount"] = float(amount)
+
+        save_expenses(expenses)
+
+        print("Expense updated successfully.")
+
+    except ValueError:
+        print("Invalid input.")
         
+               
 def main() -> None:
     expenses = load_expenses()
 
@@ -149,8 +188,12 @@ def main() -> None:
             search_by_category(expenses)
             
         elif choice == "5":
+            edit_expense(expenses)
+            
+        elif choice == "6":
             print("Goodbye!")
             break
+        
         else:
             print("Invalid option.")
 
