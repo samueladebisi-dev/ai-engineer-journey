@@ -3,8 +3,7 @@ from config import DATA_FILE
 from exceptions import InvalidExpenseError
 import os
 from statistics import average
-from statistics import maximum
-from statistics import minimum
+from statistics import maximum, minimum, total as total_amount
 
 
 def display_menu() -> None:
@@ -84,7 +83,9 @@ def view_expenses(expenses: list[dict]) -> None:
         print(f"{index}. ", end="")
         display_expense(expense)
     
-    total = calculate_total(expenses)
+    amounts = [expense["amount"] for expense in expenses]
+
+    total = total_amount(amounts)
     
     amounts = [expense["amount"] for expense in expenses]
     
@@ -96,6 +97,7 @@ def view_expenses(expenses: list[dict]) -> None:
     print(f"Highest Expense: ₦{highest:,.2f}")
     print(f"Average Expense: ₦{avg:,.2f}")
     print(f"\nTotal Spent: ₦{total:,.2f}")
+    
 def sort_by_amount(expenses: list[dict]) -> None:
     if not expenses:
         print("No expenses found.")

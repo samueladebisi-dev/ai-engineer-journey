@@ -9,3 +9,6 @@ def maximum(values: list[float]) -> float:
 
 def minimum(values: list[float]) -> float:
     return min(values) if values else 0
+
+def total(values: list[float]) -> float:
+    return sum(values)
