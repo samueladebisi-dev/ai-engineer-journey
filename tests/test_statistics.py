@@ -28,6 +28,12 @@ class TestStatistics(unittest.TestCase):
 
     def test_minimum_empty(self):
         self.assertEqual(statistics.minimum([]), 0)
+        
+    def test_total(self):
+        self.assertEqual(statistics.total([5, 10, 15]), 30)
+
+    def test_total_empty(self):
+        self.assertEqual(statistics.total([]), 0)    
 
 if __name__ == "__main__":
     unittest.main()
