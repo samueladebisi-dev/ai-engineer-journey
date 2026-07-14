@@ -14,8 +14,9 @@ def display_menu() -> None:
     print("3. Delete Expense")
     print("4. Search by Category")
     print("5. Edit Expense")
-    print("6. Sort Expense")
-    print("7. Exit")
+    print("6. Sort by Amount")
+    print("7. Sort by Name")
+    print("8. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -195,7 +196,23 @@ def sort_by_amount(expenses: list[dict]) -> None:
     for index, expense in enumerate(sorted_expenses, start=1):
         print(f"{index}. ", end="")
         display_expense(expense)
-                       
+
+def sort_by_name(expenses: list[dict]) -> None:
+    if not expenses:
+        print("No expenses available.")
+        return
+
+    sorted_expenses = sorted(
+        expenses,
+        key=lambda expense: expense["name"].lower()
+    )
+
+    print("\nExpenses (A-Z)\n")
+
+    for index, expense in enumerate(sorted_expenses, start=1):
+        print(f"{index}. ", end="")
+        display_expense(expense)
+                               
 def main() -> None:
     expenses = load_expenses()
 
@@ -223,6 +240,9 @@ def main() -> None:
             sort_by_amount(expenses)
             
         elif choice == "7":
+            sort_by_name(expenses)
+            print("Expenses sorted by name.")
+        elif choice == "8":
             print("Goodbye!")
             break
         
