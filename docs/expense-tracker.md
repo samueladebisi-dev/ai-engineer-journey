@@ -17,6 +17,13 @@
 - Search expenses by category.
 - View highest and lowest expenses.
 
+
+Users can now:
+
+- Sort expenses by amount.
+- Sort expenses alphabetically.
+- View expenses without changing the saved order.
+
 ## Future features:
 
 - Edit expenses
