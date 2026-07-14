@@ -14,7 +14,8 @@ def display_menu() -> None:
     print("3. Delete Expense")
     print("4. Search by Category")
     print("5. Edit Expense")
-    print("6. Exit")
+    print("6. Sort Expense")
+    print("7. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -39,7 +40,6 @@ def load_expenses() -> list[dict]:
 def save_expenses(expenses: list[dict]) -> None:
     with open(DATA_FILE, "w") as file:
         json.dump(expenses, file, indent=4)
-
 
 def add_expense(expenses: list[dict]) -> None:
     name = input("Expense name: ")
@@ -72,7 +72,6 @@ def add_expense(expenses: list[dict]) -> None:
 
     print("Expense added successfully.")
 
-
 def view_expenses(expenses: list[dict]) -> None:
     if not expenses:
         print("No expenses found.")
@@ -96,8 +95,21 @@ def view_expenses(expenses: list[dict]) -> None:
     print(f"Highest Expense: ₦{highest:,.2f}")
     print(f"Average Expense: ₦{avg:,.2f}")
     print(f"\nTotal Spent: ₦{total:,.2f}")
+def sort_by_amount(expenses: list[dict]) -> None:
+    if not expenses:
+        print("No expenses found.")
+        return
 
+    sorted_expenses = sorted(
+        expenses,
+        key=lambda expense: expense["amount"]
+    )
+
+    for index, expense in enumerate(sorted_expenses, start=1):
+        print(f"{index}. ", end="")
+        display_expense(expense)
 def delete_expense(expenses: list[dict]) -> None:
+    
     if not expenses:
         print("No expenses to delete.")
         return
@@ -115,8 +127,7 @@ def delete_expense(expenses: list[dict]) -> None:
             print("Invalid expense number.")
 
     except ValueError:
-        print("Please enter a valid number.")
-        
+        print("Please enter a valid number.")     
 def search_by_category(expenses: list[dict]) -> None:
     category = input("Category: ").strip().lower()
 
@@ -171,7 +182,20 @@ def edit_expense(expenses: list[dict]) -> None:
     except ValueError:
         print("Invalid input.")
         
-               
+def sort_by_amount(expenses: list[dict]) -> None:
+    if not expenses:
+        print("No expenses found.")
+        return
+
+    sorted_expenses = sorted(
+        expenses,
+        key=lambda expense: expense["amount"]
+    )
+
+    for index, expense in enumerate(sorted_expenses, start=1):
+        print(f"{index}. ", end="")
+        display_expense(expense)
+                       
 def main() -> None:
     expenses = load_expenses()
 
@@ -194,8 +218,11 @@ def main() -> None:
             
         elif choice == "5":
             edit_expense(expenses)
-            
+
         elif choice == "6":
+            sort_by_amount(expenses)
+            
+        elif choice == "7":
             print("Goodbye!")
             break
         
