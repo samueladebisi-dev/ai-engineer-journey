@@ -4,7 +4,7 @@ from exceptions import InvalidExpenseError
 import os
 from statistics import average
 from statistics import maximum, minimum, total as total_amount
-
+from csv_export import export_expenses
 
 def display_menu() -> None:
     print("\nExpense Tracker")
@@ -15,7 +15,8 @@ def display_menu() -> None:
     print("5. Edit Expense")
     print("6. Sort by Amount")
     print("7. Sort by Name")
-    print("8. Exit")
+    print("8. Export to CSV")
+    print("9. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -214,6 +215,16 @@ def sort_by_name(expenses: list[dict]) -> None:
     for index, expense in enumerate(sorted_expenses, start=1):
         print(f"{index}. ", end="")
         display_expense(expense)
+
+def export_to_csv(expenses: list[dict]) -> None:
+    filename = input("Enter export filename: ").strip()
+
+    if not filename.endswith(".csv"):
+        filename += ".csv"
+
+    export_expenses(expenses, filename)
+
+    print(f"Expenses exported to {filename}")
                                
 def main() -> None:
     expenses = load_expenses()
@@ -245,6 +256,8 @@ def main() -> None:
             sort_by_name(expenses)
             print("Expenses sorted by name.")
         elif choice == "8":
+            export_to_csv(expenses)
+        elif choice == "9":
             print("Goodbye!")
             break
         
