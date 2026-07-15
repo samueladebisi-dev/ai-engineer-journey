@@ -1,4 +1,5 @@
 import json
+from logger import log
 from config import DATA_FILE
 from exceptions import InvalidExpenseError
 import os
@@ -126,12 +127,15 @@ def delete_expense(expenses: list[dict]) -> None:
         if 0 <= index < len(expenses):
             deleted = expenses.pop(index)
             save_expenses(expenses)
+            log(f"Deleted expense: {deleted['name']}")
             print(f"Deleted '{deleted['name']}'.")
         else:
             print("Invalid expense number.")
 
     except ValueError:
-        print("Please enter a valid number.")     
+        print("Please enter a valid number.")
+        return
+    
 def search_by_category(expenses: list[dict]) -> None:
     category = input("Category: ").strip().lower()
 
@@ -223,9 +227,9 @@ def export_to_csv(expenses: list[dict]) -> None:
         filename += ".csv"
 
     export_expenses(expenses, filename)
-
+    log(f"Exported expenses to {filename}")                               
     print(f"Expenses exported to {filename}")
-                               
+    
 def main() -> None:
     expenses = load_expenses()
 
