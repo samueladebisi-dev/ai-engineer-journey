@@ -38,9 +38,9 @@ To document my progress, stay consistent, and improve my development skills dail
 - JSON
 - CSV Processing
 - File Handling
-- Command Line Applications
+- CLI Applications
 - Software Testing
-- Machine Learning Fundamentals
+- Advanced Machine Learning 
 
 ## Development Practices
 
@@ -63,31 +63,15 @@ This repository follows a gradual software engineering approach by:
 ### CLI Expense Tracker
 Status: In Progress
 
-### Current Features
+## Project Highlights
 
-- Add expenses
-- View expenses
-- Delete expenses
-- Automatic JSON storage
-- Total expense calculation
-- Average expense calculation
+- JSON-based data storage
+- CSV export support
+- Search by category
+- Sorting by name and amount
 - Input validation
-
-Planned Features:
-- Add expenses
-- Delete expenses
-- Save to JSON
-- Monthly summaries
-- Expense categories
-
-## Technologies Used
-
-- Python
-- JSON
-- CSV
-- pathlib
-- unittest
-- pytest
+- Modular project structure
+- Unit tests
 
 ## Repository Growth
 
