@@ -72,6 +72,9 @@ Status: In Progress
 - Input validation
 - Modular project structure
 - Unit tests
+- Import expenses from CSV
+- Export expenses to CSV
+- Duplicate import protection
 
 ## Repository Growth
 
