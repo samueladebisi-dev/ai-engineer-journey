@@ -6,6 +6,7 @@ import os
 from statistics import average
 from statistics import maximum, minimum, total as total_amount
 from csv_export import export_expenses
+from csv_import import import_expenses
 
 def display_menu() -> None:
     print("\nExpense Tracker")
@@ -17,7 +18,8 @@ def display_menu() -> None:
     print("6. Sort by Amount")
     print("7. Sort by Name")
     print("8. Export to CSV")
-    print("9. Exit")
+    print("9. Import from CSV")
+    print("10. Exit")
 
 
 def display_expense(expense: dict) -> None:
@@ -113,6 +115,7 @@ def sort_by_amount(expenses: list[dict]) -> None:
     for index, expense in enumerate(sorted_expenses, start=1):
         print(f"{index}. ", end="")
         display_expense(expense)
+
 def delete_expense(expenses: list[dict]) -> None:
     
     if not expenses:
@@ -229,7 +232,21 @@ def export_to_csv(expenses: list[dict]) -> None:
     export_expenses(expenses, filename)
     log(f"Exported expenses to {filename}")                               
     print(f"Expenses exported to {filename}")
+
+def import_from_csv(expenses: list[dict]) -> None:
+    filename = input("CSV filename: ").strip()
+
+    imported = import_expenses(filename)
+
+    expenses.extend(imported)
+
+    save_expenses(expenses)
+
+    log(f"Imported {len(imported)} expenses from {filename}")
+
+    print(f"Imported {len(imported)} expenses.")
     
+      
 def main() -> None:
     expenses = load_expenses()
 
@@ -259,9 +276,14 @@ def main() -> None:
         elif choice == "7":
             sort_by_name(expenses)
             print("Expenses sorted by name.")
+            
         elif choice == "8":
             export_to_csv(expenses)
+        
         elif choice == "9":
+            import_from_csv(expenses)
+        
+        elif choice == "10":
             print("Goodbye!")
             break
         
