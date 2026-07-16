@@ -246,6 +246,20 @@ def import_from_csv(expenses: list[dict]) -> None:
 
     print(f"Imported {len(imported)} expenses.")
     
+    existing = {
+        (e["name"], e["category"], e["amount"])
+        for e in expenses
+    }
+
+    for expense in imported:
+        key = (
+            expense["name"],
+            expense["category"],
+            expense["amount"],
+        )
+
+        if key not in existing:
+            expenses.append(expense)
       
 def main() -> None:
     expenses = load_expenses()
