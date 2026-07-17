@@ -33,7 +33,31 @@ class TestStatistics(unittest.TestCase):
         self.assertEqual(statistics.total([5, 10, 15]), 30)
 
     def test_total_empty(self):
-        self.assertEqual(statistics.total([]), 0)    
+        self.assertEqual(statistics.total([]), 0)
+        
+    def test_monthly_total(self):
+        expenses = [
+            {"amount": 100, "category": "Food"},
+            {"amount": 200, "category": "Transport"},
+        ]
+
+        self.assertEqual(
+            statistics.monthly_total(expenses),
+            300,
+        )
+
+
+    def test_monthly_total_category(self):
+        expenses = [
+            {"amount": 100, "category": "Food"},
+            {"amount": 200, "category": "Transport"},
+            {"amount": 50, "category": "Food"},
+        ]
+
+        self.assertEqual(
+            statistics.monthly_total(expenses, "Food"),
+            150,
+        )        
 
 if __name__ == "__main__":
     unittest.main()
