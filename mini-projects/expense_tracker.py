@@ -3,8 +3,13 @@ from logger import log
 from config import DATA_FILE
 from exceptions import InvalidExpenseError
 import os
-from statistics import average
-from statistics import maximum, minimum, total as total_amount
+from statistics import (
+    average,
+    maximum,
+    minimum,
+    total as total_amount,
+    monthly_total,
+)
 from csv_export import export_expenses
 from csv_import import import_expenses
 
@@ -96,10 +101,13 @@ def view_expenses(expenses: list[dict]) -> None:
     highest = maximum(amounts)
     lowest = minimum(amounts)
     avg = average(amounts)
+    monthly = monthly_total(expenses)
+
 
     print(f"Lowest Expense: ₦{lowest:,.2f}")
     print(f"Highest Expense: ₦{highest:,.2f}")
     print(f"Average Expense: ₦{avg:,.2f}")
+    print(f"Monthly Total: ₦{monthly:,.2f}")
     print(f"\nTotal Spent: ₦{total:,.2f}")
     
 def sort_by_amount(expenses: list[dict]) -> None:
