@@ -28,3 +28,13 @@ Users can now:
 
 - Edit expenses
 - Monthly reports
+
+## Expense Summary
+
+The application now displays:
+
+- Total spending
+- Average spending
+- Highest expense
+- Lowest expense
+- Monthly expense summary
