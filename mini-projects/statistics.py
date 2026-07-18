@@ -23,3 +23,16 @@ def monthly_total(expenses: list[dict], category: str | None = None) -> float:
         return sum(expense["amount"] for expense in filtered)
 
     return sum(expense["amount"] for expense in expenses)
+
+def category_totals(expenses: list[dict]) -> dict[str, float]:
+    totals: dict[str, float] = {}
+
+    for expense in expenses:
+        category = expense["category"]
+
+        totals[category] = (
+            totals.get(category, 0)
+            + expense["amount"]
+        )
+
+    return totals
