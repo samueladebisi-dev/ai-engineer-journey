@@ -9,4 +9,5 @@ def export_expenses(expenses: list[dict], filename: str) -> None:
         )
 
         writer.writeheader()
-        writer.writerows(expenses)
+        for expense in expenses:
+            writer.writerow(expense)
