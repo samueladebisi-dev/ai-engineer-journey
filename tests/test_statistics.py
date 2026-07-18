@@ -57,7 +57,19 @@ class TestStatistics(unittest.TestCase):
         self.assertEqual(
             statistics.monthly_total(expenses, "Food"),
             150,
-        )        
+        )
+        
+    def test_category_totals(self):
+        expenses = [
+            {"amount": 50, "category": "Food"},
+            {"amount": 30, "category": "Food"},
+            {"amount": 20, "category": "Transport"},
+        ]
+
+        totals = statistics.category_totals(expenses)
+
+        self.assertEqual(totals["Food"], 80)
+        self.assertEqual(totals["Transport"], 20)        
 
 if __name__ == "__main__":
     unittest.main()
