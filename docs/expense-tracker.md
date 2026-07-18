@@ -38,3 +38,13 @@ The application now displays:
 - Highest expense
 - Lowest expense
 - Monthly expense summary
+
+## Spending Reports
+
+The application now provides:
+
+- Monthly spending summary
+- Category spending totals
+- Highest expense
+- Lowest expense
+- Average expense
