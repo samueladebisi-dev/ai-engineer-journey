@@ -9,6 +9,7 @@ from statistics import (
     minimum,
     total as total_amount,
     monthly_total,
+    category_totals,
 )
 from csv_export import export_expenses
 from csv_import import import_expenses
@@ -109,6 +110,11 @@ def view_expenses(expenses: list[dict]) -> None:
     print(f"Average Expense: ₦{avg:,.2f}")
     print(f"Monthly Total: ₦{monthly:,.2f}")
     print(f"\nTotal Spent: ₦{total:,.2f}")
+    print("\nCategory Summary")
+
+    for category, amount in category_totals(expenses).items():
+        print(f"- {category}: ₦{amount:,.2f}")
+    
     
 def sort_by_amount(expenses: list[dict]) -> None:
     if not expenses:
