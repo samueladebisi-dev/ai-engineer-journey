@@ -276,7 +276,7 @@ def import_from_csv(expenses: list[dict]) -> None:
             expenses.append(expense)
       
 def main() -> None:
-    expenses = load_expenses()
+    manager = ExpenseManager(expenses)
 
     while True:
         display_menu()
@@ -284,32 +284,32 @@ def main() -> None:
         choice = input("Select an option: ")
 
         if choice == "1":
-            add_expense(expenses)
+            add_expense(manager)
 
         elif choice == "2":
-            view_expenses(expenses)
+            view_expenses(manager)
 
         elif choice == "3":
-            delete_expense(expenses)
+            delete_expense(manager)
 
         elif choice == "4":
-            search_by_category(expenses)
+            search_by_category(manager)
             
         elif choice == "5":
-            edit_expense(expenses)
+            edit_expense(manager)
 
         elif choice == "6":
-            sort_by_amount(expenses)
-            
+            sort_by_amount(manager)
+
         elif choice == "7":
-            sort_by_name(expenses)
+            sort_by_name(manager)
             print("Expenses sorted by name.")
             
         elif choice == "8":
-            export_to_csv(expenses)
+            export_to_csv(manager)
         
         elif choice == "9":
-            import_from_csv(expenses)
+            import_from_csv(manager)
         
         elif choice == "10":
             print("Goodbye!")
