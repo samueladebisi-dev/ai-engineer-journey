@@ -48,3 +48,7 @@ The application now provides:
 - Highest expense
 - Lowest expense
 - Average expense
+
+## Project Structure
+
+The application now separates expense management from the command-line interface using an `ExpenseManager` class. This makes the code easier to maintain, test, and extend.
