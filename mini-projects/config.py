@@ -2,4 +2,4 @@ DATA_FILE = "expenses.json"
 
 APP_NAME = "Expense Tracker"
 
-VERSION = "1.8.0"
+VERSION = "1.9.0"
