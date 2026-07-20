@@ -9,9 +9,12 @@ def save_json(filename: str, data: list[dict]) -> None:
         json.dump(data, file, indent=4)
 
 def load_json(filename: str) -> list[dict]:
-    """Load data from a JSON file."""
+    if not os.path.exists(filename):
+        return []
+
     try:
-        with open(filename, "r") as file:
+        with open(filename, "r", encoding="utf-8") as file:
             return json.load(file)
-    except FileNotFoundError:
+
+    except json.JSONDecodeError:
         return []
