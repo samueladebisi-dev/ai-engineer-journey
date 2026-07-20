@@ -7,7 +7,7 @@ class TestExpenseManager(unittest.TestCase):
     def test_add(self):
         manager = ExpenseManager([])
 
-        manager.expenses.append(
+        manager.add(
             {
                 "name": "Food",
                 "category": "Food",
