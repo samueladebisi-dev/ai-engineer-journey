@@ -7,7 +7,8 @@ def import_expenses(filename: str) -> list[dict]:
     with open(filename, "r", newline="", encoding="utf-8") as file:
         reader = csv.DictReader(file)
 
-        for row in reader:
+    for row in reader:
+        try:
             expenses.append(
                 {
                     "name": row["name"],
@@ -15,5 +16,7 @@ def import_expenses(filename: str) -> list[dict]:
                     "amount": float(row["amount"]),
                 }
             )
-
+        except (KeyError, ValueError):
+            continue
+        
     return expenses
