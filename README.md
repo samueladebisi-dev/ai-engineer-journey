@@ -1,4 +1,4 @@
-# AI Engineer Journey 
+# AI Engineering
 
 This repository contains my daily learning progress, experiments, notes, mini-projects, and coding practice as I work toward becoming an AI Engineer.
 
@@ -6,7 +6,7 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
 - Python practice
 - AI/ML notes
 - Mini projects
-- Random coding experiments
+- Coding experiments
 - Git & GitHub practice
 - Problem solving
 - Learning resources
@@ -14,10 +14,8 @@ This repository contains my daily learning progress, experiments, notes, mini-pr
  ## Repository Structure
 This repository is organized into practice, experiments, projects, notes, prompts, and resources to track my learning journey.
 
-## Why This Repository Exists
-To document my progress, stay consistent, and improve my development skills daily.
-
 ## Repository Goals
+This repo exists to document my progress, stay consistent, and improve my development skills daily.
 - Improve coding skills
 - Learn AI engineering
 - Build consistency
@@ -85,4 +83,18 @@ This repository documents my journey from Python fundamentals toward AI engineer
 This repository documents my journey toward becoming an AI Engineer by consistently building projects, improving code quality, writing tests, and learning software engineering best practices.
 
 Started: May 2026
+
+## Installation
+
+```bash
+git clone https://github.com/samueladebisi-dev/ai-engineer-journey.git
+cd ai-engineer-journey
+pip install -r requirements.txt
+```
+
+Run the application using:
+
+```bash
+python mini-projects/expense_tracker.py
+```
 
